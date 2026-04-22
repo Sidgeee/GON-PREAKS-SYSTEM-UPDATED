@@ -71,8 +71,20 @@ while($row = mysqli_fetch_assoc($cat_mapping_query)) {
             --text-muted: #94a3b8;
         }
 
-        body { background: #020617; color: #f8fafc; font-family: 'Inter', sans-serif; }
-        .main-content { padding: 40px; margin-left: 260px; }
+        body { 
+    background: #020617; 
+    color: #f8fafc; 
+    font-family: 'Inter', sans-serif; 
+    display: flex; /* Critical for the sidebar to sit next to content */
+    margin: 0;
+}
+        .main-content { 
+    flex-grow: 1; /* Let flexbox handle the space, not manual margins */
+    padding: 50px 40px; /* Matching your main style.css */
+    height: 100vh;
+    overflow-y: auto;
+    margin-left: 0; /* Remove the manual margin-left */
+}
 
         .sortable { cursor: pointer; transition: 0.2s; }
         .sortable:hover { color: #fff !important; }

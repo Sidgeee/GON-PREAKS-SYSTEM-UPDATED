@@ -15,18 +15,20 @@ $current_supplier_id = $_GET['id'] ?? null;
 <style>
     /* Essential Sidebar Structure */
     .sidebar {
-        width: 260px;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background: #0f172a; /* Solid dark base */
-        border-right: 1px solid rgba(255, 255, 255, 0.05);
-        display: flex;
-        flex-direction: column;
-        z-index: 1000;
-        overflow-y: auto;
-    }
+    width: 280px;
+    height: 94vh;
+    margin: 3vh 0 3vh 20px;
+    background: var(--sidebar-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    /* REMOVE position: fixed; */
+    /* REMOVE z-index: 1000; */
+    flex-shrink: 0; 
+}
 
     .sidebar-header {
         padding: 40px 25px;
